@@ -4,13 +4,13 @@
 
 Первое что нам необходимо сделать это остановить работу воркспейса:
 
-Переходим в директории с распокованными инсталяторами:
+Переходим в директории с установленным Optimacros:
 
-`cd /opt/om/workspace-installer/`
+`cd /opt/om/`
 
-затем останавливаем работу воркспейса при помощи команды:
+Затем останавливаем работу воркспейса при помощи команды:
 
-`current/install workspace --path /opt/om/workspace1/manifest.json shutdown`
+`/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown`
 
 ![](./pictures/sshPutty4.jpg)
 
@@ -28,16 +28,13 @@
 
 `tar xzvpf workspace2.tar.gz`
 
-Делаем Up для этой папки воркспейса с именем workspace2
+Делаем Up для этой (распакованной) папки воркспейса с именем workspace2
 
 `/opt/om/workspace-installer/current/install workspace --path /путьВДиректориюКоторуюМыРаспаковалиАрхив/workspace2/manifest.json shutdown`
 
 ![](./pictures/sshPutty7.jpg)
 
-Вот и всё, на этом вы получаем воркспейс восстановленный из бекапа
-
-
-
+На этом всё, мы получаем воркспейс восстановленный из бекапа.
 
 
 [Вернуться к содержанию <](contents.md)
