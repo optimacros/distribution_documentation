@@ -5,6 +5,7 @@
 3. [Чистая установка дистрибутива воркспейса Optimacros](cleanInstallation.md)
 4. [Чистая установка Логин Центра](cleanInstallationLc.md)
 5. [Настройка Логин Центра и воркспейса, установленных на одном сервере](configurarionLcWorkspace.md)
-6. [Предварительные установки ПО необходимые для работы Optimacros](softInstall.md)
+6. [Резервное копирование воркспейса](reserveWorkspace.md)
+7. [Предварительные установки ПО необходимые для работы Optimacros](softInstall.md)
 
 [Вернуться к оглавлению <<](index.md)
