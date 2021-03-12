@@ -10,5 +10,6 @@
 8. [Резервное копирование логин центра](reserveLc.md)
 9. [Предварительные установки ПО необходимые для работы Optimacros](softInstall.md)
 10. [Восстановление пароля для Логин Центра Optimacros](forgotPassword.md)
+11. [Схемы внутреннего сетевого взаимодействия Optimacros](serverNetworkSchemas.md)
 
 [Вернуться к оглавлению <<](index.md)
