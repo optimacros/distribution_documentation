@@ -11,5 +11,6 @@
 9. [Предварительные установки ПО необходимые для работы Optimacros](softInstall.md)
 10. [Восстановление пароля для Логин Центра Optimacros](forgotPassword.md)
 11. [Схемы внутреннего сетевого взаимодействия Optimacros](serverNetworkSchemas.md)
+12. [Изменение параметров Логин-Центра](changeLCParams.md)
 
 [Вернуться к оглавлению <<](index.md)
