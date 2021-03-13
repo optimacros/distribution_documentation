@@ -340,6 +340,50 @@ use ntlmv2 = yes
 ```
 
 ### Login Center
+
+`required|object`
+
+Настройка взаимодействия воркспейса с логин центром
+
+`loginCenter.url` - `required|string` Полный адрес логин центр, будет использоваться 
+для формирования ссылок на профиль, выход из системы и переадресация при необходимости авторизации
+
+`loginCenter.token` - `required|string` Секретный токен воркспейса из логин центра
+
+`loginCenter.apiUrl` - `required|string` Адрес Websocker API точки логин центра для облуживания воркспейсов
+
+```
+{
+    ...
+    "loginCenter": {
+        "url": "https://lc.company.ru/",
+        "token": "4aed337a0ac34dd13716c476a4c7",
+        "apiUrl": "wss://lc.company.ru/api/ws/v1/"
+    }
+    ...
+}
+```
+
 ### Admin
+
+`required|object`
+
+Настройка супер администратора воркспейса или сервисной учетной записи
+
+`admin.email` - `required|string` Email пользователя
+
+```
+{
+    ...
+    "admin": {
+        "email": "admin@optimacros.com"
+    }
+    ...
+}
+```
+
 ### Shared Folders
+
+
+
 ### Flags
