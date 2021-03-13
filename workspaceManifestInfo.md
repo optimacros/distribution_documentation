@@ -204,7 +204,9 @@
 
 ### Routes
 
-Данный парамтер позволяет кастомизировать таблицу маршрутов 
+`object[]`
+
+Данный параметр позволяет кастомизировать таблицу маршрутов 
 контейнера ([man](https://man7.org/linux/man-pages/man8/ip-route.8.html))
 
 ```
@@ -221,6 +223,51 @@
 ```
 
 ### FreeTDS
+
+`object[]`
+
+Параметр позволяет настроить программный интерфейс `freetds` ([man](https://www.freetds.org/)) 
+для работы Optimacros с MS SQL
+
+Данный интерфейс используется Optimacros макросами при пользовании 
+коннектором MS SQL с драйвером DBLIB (Выбран по умолчанию)
+
+`freetds[n].hosts` - `required|string[]` Каждый элемент порождает отдельную запись `freetds`
+`freetds[n].port` - `integer` 
+`freetds[n].ntlmv2` - `boolean` При использовании Active Directory авторизации, 
+возможно потребуется включить в true. См. [man](https://www.freetds.org/)
+
+```
+{
+    ...
+    "freetds": [
+        {
+            "hosts": [
+                "instance1.example.com",
+                "instance2.example.com"
+            ],
+            "port": 1433,
+            "ntlmv2": true
+        }
+    ],
+    ...
+}
+```
+
+Пример сгенерированной конфигурации `freetds` на основе параметров выше:
+
+```
+...
+[instance1.example.com]
+host = instance1.example.com
+port = 1433
+use ntlmv2 = yes
+
+[instance2.example.com]
+host = instance2.example.com
+port = 1433
+use ntlmv2 = yes
+```
 
 ## Блок workspace
 
