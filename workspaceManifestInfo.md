@@ -203,6 +203,23 @@
 ```
 
 ### Routes
+
+Данный парамтер позволяет кастомизировать таблицу маршрутов 
+контейнера ([man](https://man7.org/linux/man-pages/man8/ip-route.8.html))
+
+```
+{
+    ...
+    "routes": [
+        {
+            "destination": "192.168.1.50/32",
+            "gateway": "10.0.3.1"
+        }
+    ],
+    ...
+}
+```
+
 ### FreeTDS
 
 ## Блок workspace
