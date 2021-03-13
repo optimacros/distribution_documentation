@@ -232,7 +232,7 @@
 Данный интерфейс используется Optimacros макросами при пользовании 
 коннектором MS SQL с драйвером DBLIB (Выбран по умолчанию)
 
-`freetds[n].hosts` - `required|string[]` Каждый элемент порождает отдельную запись конфигурации `freetds`
+`freetds[n].hosts` - `required|string[]` Хост MS SQL. Каждый элемент порождает отдельную запись конфигурации `freetds`
 
 `freetds[n].port` - `integer` Порт MS SQL
 
