@@ -14,6 +14,7 @@
 12. [Изменению пароля mongodb для Логин Центра Optimacros:](changeMongoPass.md)
 13. [Изменение параметров Логин-Центра](changeLCParams.md)
 14. [Изменение адреса/имени воркспейса](changeWorkspaceName.md)
-15. [Описание манифест файла воркспейса Optimacros](workspaceManifestInfo.md)
+15. [Добавление нового воркспейса](addNewWorkspace.md)
+16. [Описание манифест файла воркспейса Optimacros](workspaceManifestInfo.md)
 
 [Вернуться к оглавлению <<](index.md)
