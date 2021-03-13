@@ -10,6 +10,10 @@
 8. [Резервное копирование логин центра](reserveLc.md)
 9. [Предварительные установки ПО необходимые для работы Optimacros](softInstall.md)
 10. [Восстановление пароля для Логин Центра Optimacros](forgotPassword.md)
-11. [Описание манифест файла воркспейса Optimacros](workspaceManifestInfo.md)
+11. [Схемы внутреннего сетевого взаимодействия Optimacros](serverNetworkSchemas.md)
+12. [Изменению пароля mongodb для Логин Центра Optimacros:](changeMongoPass.md)
+13. [Изменение параметров Логин-Центра](changeLCParams.md)
+14. [Изменение адреса/имени воркспейса](changeWorkspaceName.md)
+15. [Описание манифест файла воркспейса Optimacros](workspaceManifestInfo.md)
 
 [Вернуться к оглавлению <<](index.md)
