@@ -154,14 +154,33 @@
 
 ### DNS
 
-Параметр позволяет настроить DNS для контейнера
+`object`
+
+Параметр позволяет настроить DNS для контейнера, файл 
+`/etc/resolv.conf` ([man](https://man7.org/linux/man-pages/man5/resolv.conf.5.html)).
+
+`dns.search` - `string[]` См. в `man` пункт о `search`.
+
+`dns.nameServers` - `object[]` Каждый объект 
+коллекции содержит информацию об одном DNS сервере
+
+`dns.nameServers[n].ip` - `required|string` IpV4 адрес DNS сервера
 
 ```
 {
     ...
     "dns": {
-        "test.example.com": "10.0.5.34",
-        "ftp.example.com": "192.168.1.44"
+        "search": [
+            "example.com"
+        ],
+        "nameServers": [
+            {
+                "ip": "8.8.8.8"
+            },
+            {
+                "ip": "8.8.4.4"
+            }
+        ]
     },
     ...
 }
@@ -173,8 +192,11 @@
 {
     ...
     "dns": {
-        "test.example.com": "10.0.5.34",
-        "ftp.example.com": "192.168.1.44"
+        "nameServers": [
+            {
+                "ip": "10.0.3.1"
+            }
+        ]
     },
     ...
 }
