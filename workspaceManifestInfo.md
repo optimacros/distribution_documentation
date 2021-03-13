@@ -384,6 +384,26 @@ use ntlmv2 = yes
 
 ### Shared Folders
 
+`object`
 
+Подключение хост папок для использования в системе макросов
 
-### Flags
+```
+{
+    ...
+    "sharedFolders": {
+        "myFolder1": {
+            "src": "/mnt/samba1"
+        },
+        "anotherFolder": {
+            "src": "/mnt/ftp1"
+        }
+    }
+    ...
+}
+```
+
+`myFolder1` или `anotherFolder` - Это пример, как может называться папка, которая будет доступна в системе макросов
+
+`sharedFolders.n.src` - `required|string` Абсолютный путь к папке на хосте, 
+которая будет доступна в макросах под именем `n`
