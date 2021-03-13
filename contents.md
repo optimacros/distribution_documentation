@@ -13,5 +13,6 @@
 11. [Схемы внутреннего сетевого взаимодействия Optimacros](serverNetworkSchemas.md)
 12. [Изменению пароля mongodb для Логин Центра Optimacros:](changeMongoPass.md)
 13. [Изменение параметров Логин-Центра](changeLCParams.md)
+14. [Изменение адреса/имени воркспейса](changeWorkspaceName.md)
 
 [Вернуться к оглавлению <<](index.md)
