@@ -77,9 +77,7 @@ db.workspace.insertOne({
 воркспейса.
 
 Создаем директории:
-```
-mkdir -p /opt/om/workspace1 /opt/om/workspace-installer/current
-```
+```mkdir -p /opt/om/workspace1 /opt/om/workspace-installer/current```
 
 На этом этапе, можно считать, что фундамент структуры директорий воркспейса, мы уже заложили.
 
@@ -138,10 +136,9 @@ htop введя команду `htop`
 
 `workspace.loginCenter.url` вводим URL нашего логин центра\
 `workspace.loginCenter.token` указываем атрибут `token`, который ранее использовали для добавления mongodb документа\
-`workspace.loginCenter.apiUrl` Вместо `нашДоменЛогинЦентра` указывает домен нашего логин центра:  
-`wss://нашДоменЛогинЦентра/api/ws/v1/`. 
+`workspace.loginCenter.apiUrl` вводим URL вида `wss://нашДоменЛогинЦентра/api/ws/v1/`, где вместо `нашДоменЛогинЦентра` указываем домен нашего логин центра
 
-`workspace.admin.email` указывает строку с email учётной записи администратора воркспейса.
+`workspace.admin.email` указываем строку с email учётной записи администратора воркспейса.
 
 Шпаргалка с краткими комментариями по некоторым свойствам файла манифест (подробнее [тут](workspaceManifestInfo.md)):
 
@@ -197,9 +194,7 @@ htop введя команду `htop`
 Распаковываем архив с дистрибутивом в директорию current где 
 `/home/user/installer-версия.tar` это путь к скачаному ранее дистрибутиву:
 
-```
-`tar -xf /home/user/installer-версия.tar -C /opt/om/workspace-installer/current`
-```
+```tar -xf /home/user/installer-версия.tar -C /opt/om/workspace-installer/current```
 
 Затем запускаем команду поднятия воркспейса:
 
