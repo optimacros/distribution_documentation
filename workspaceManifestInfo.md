@@ -23,7 +23,7 @@
     "id": "8522aedecc6b4219ee87ee28",
     "name": "TEST",
     "web": {
-      "url": "https://om.test.workspace.ru" // <= Интересующее нас поле в случае смены адреса Логин центра
+      "url": "https://om.test.workspace.ru"
     },
     "loginCenter": {
       "url": "https://lc.company.ru/",
@@ -233,8 +233,10 @@
 коннектором MS SQL с драйвером DBLIB (Выбран по умолчанию)
 
 `freetds[n].hosts` - `required|string[]` Каждый элемент порождает отдельную запись конфигурации `freetds`
+
 `freetds[n].port` - `integer` Порт MS SQL
-`freetds[n].ntlmv2` - `boolean` При использовании Active Directory авторизации, 
+
+`freetds[n].ntlmv2` - `boolean` При использовании Active Directory авторизации,
 возможно потребуется включить в true. См. [man](https://www.freetds.org/)
 
 ```
@@ -272,6 +274,24 @@ use ntlmv2 = yes
 ## Блок `workspace`
 
 Блок `workspace` позволяет настроить работу воркспейс приложения Optimacros внутри контейнера.
+
+```
+{
+    "id": "8522aedecc6b4219ee87ee28",
+    "name": "TEST",
+    "web": {
+      "url": "https://om.test.workspace.ru"
+    },
+    "loginCenter": {
+      "url": "https://lc.company.ru/",
+      "token": "4aed337a0ac34dd13716c476a4c7",
+      "apiUrl": "wss://lc.company.ru/api/ws/v1/"
+    },
+    "admin": {
+      "email": "admin@optimacros.com"
+    }
+}
+```
 
 ### Id
 
