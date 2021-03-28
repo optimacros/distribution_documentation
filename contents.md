@@ -17,5 +17,6 @@
 15. [Добавление нового воркспейса](addNewWorkspace.md)
 16. [Описание манифест файла воркспейса Optimacros](workspaceManifestInfo.md)
 17. [Изменение администратора воркспейса (сервисная учетная запись)](changeWorkspaceSuperAdmin.md)
+18. [Как изменить подсеть LXC](lxcChangeAddressInfo.md)
 
 [Вернуться к оглавлению <<](index.md)
