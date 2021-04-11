@@ -23,5 +23,7 @@ ii  libapparmor1:amd64               2.12-4ubuntu5.1                     amd64  
 
 `systemctl restart lxc`
 
+
 [Вернуться к экспертизе <](expertise.md)
+
 [Вернуться к оглавлению <<](index.md)
