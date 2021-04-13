@@ -18,5 +18,6 @@
 16. [Описание манифест файла воркспейса Optimacros](workspaceManifestInfo.md)
 17. [Изменение администратора воркспейса (сервисная учетная запись)](changeWorkspaceSuperAdmin.md)
 18. [Как изменить подсеть LXC](lxcChangeAddressInfo.md)
+19. [Как изменить директорию с данными для Docker и LXC](dockerAndLxcChangeDataFolder.md)
 
 [Вернуться к оглавлению <<](index.md)
