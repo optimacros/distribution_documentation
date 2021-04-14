@@ -19,6 +19,6 @@
 17. [Изменение администратора воркспейса (сервисная учетная запись)](changeWorkspaceSuperAdmin.md)
 18. [Как изменить подсеть LXC](lxcChangeAddressInfo.md)
 19. [Как изменить директорию с данными для Docker и LXC](dockerAndLxcChangeDataFolder.md)
-20. [Установка на ALT Server 9](installToAltServer.md)
+20. [Особенности установки на ALT Server 9](installToAltServer.md)
 
 [Вернуться к оглавлению <<](index.md)
