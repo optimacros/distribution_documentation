@@ -77,7 +77,7 @@ systemctl stop lxc
 
 Переносим директорию
 ```
-rsync -aqxP /var/lib/lxc /opt1/lxc
+cp -rp /var/lib/lxc /opt1/lxc
 ```
 
 Временно архивируем оригинальную директорию
