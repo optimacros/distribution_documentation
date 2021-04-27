@@ -23,7 +23,7 @@ systemctl stop docker
 
 Копируем директорию
 ```
-rsync -aqxP /var/lib/docker /opt1/docker
+cp -rp /var/lib/docker /opt1/docker
 ```
 
 Временно архивируем оригинальную директорию
