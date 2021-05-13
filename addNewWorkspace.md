@@ -77,11 +77,11 @@ db.workspace.insertOne({
 воркспейса.
 
 Создаем директории:
-```mkdir -p /opt/om/workspace1 /opt/om/workspace-installer/current```
+```mkdir -p /om/workspace1 /om/workspace-installer/current```
 
 На этом этапе, можно считать, что фундамент структуры директорий воркспейса, мы уже заложили.
 
-Затем перемещаемся в директорию `workspace1` с помощью команды `cd /opt/om/workspace1` и создаём в ней файл `manifest.json` 
+Затем перемещаемся в директорию `workspace1` с помощью команды `cd /om/workspace1` и создаём в ней файл `manifest.json` 
 с помощью команды `nano manifest.json` после выполнения, которой попадаем в режим редактирования данного файла. Вот 
 стандартный вид файла `manifest.json`:
 
@@ -204,11 +204,11 @@ htop введя команду `htop`
 Распаковываем архив с дистрибутивом в директорию current где 
 `/home/user/installer-версия.tar` это путь к скачаному ранее дистрибутиву:
 
-```tar -xf /home/user/installer-версия.tar -C /opt/om/workspace-installer/current```
+```tar -xf /home/user/installer-версия.tar -C /om/workspace-installer/current```
 
 Затем запускаем команду поднятия воркспейса:
 
-```/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json up```
+```/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json up```
 
 И наблюдаем чтобы весь процесс поднятия прошёл успешно, по окончанию процесса видим такой вывод:
 

@@ -25,7 +25,7 @@
  
 Затем мы должны подключиться к серверу через протокол ssh в основном это делается с помощью Putty, введя логин и пароль 
 и перейдя в режим супер пользователя с помощью команды ```sudo su``` Проверяем что дистрибутив залился с помощью команды
-```ls``` переходим в директорию ```/opt/om/``` в которой мы увидим директорию установленного логин центра 
+```ls``` переходим в директорию ```/om/``` в которой мы увидим директорию установленного логин центра 
 ```login-center```, директорию установленного воркспейса ```workspace1``` и директорию с дистрибутивами 
 ```workspace-installer```, внутри которой есть две директории ```prev``` и ```current```.
 
@@ -36,17 +36,17 @@
 
 Далее мы должны будем остановить работу вокрспейса, до того как начнём обновление Логин центра.
 Переходим в папку инсталяторами воркспейса
-```cd /opt/om/workspace-installer/```
+```cd /om/workspace-installer/```
  
 И затем останавливаем работу воркспейса с помощью команды:
  
-```current/install workspace --path /opt/om/workspace1/manifest.json shutdown```
+```current/install workspace --path /om/workspace1/manifest.json shutdown```
 
 ![](./pictures/sshPutty3.jpg)
 
 Если после ввода команды мы увидели в командной строке зелёную строку текста: 
 
-```Load manifest '/opt/om/workspace1/manifest.json'```
+```Load manifest '/om/workspace1/manifest.json'```
 
 ![](./pictures/sshPutty4.jpg)
 
@@ -113,11 +113,11 @@
 
 После этого остаётся восстановить работу воркспейса. Переходим в директорию с инсталятором воркспейса:
 
-`cd /opt/om/workspace-installer`
+`cd /om/workspace-installer`
 
 Далее на нужно запустить команду, которая восстановит все клиентские модели из бекапов и запустит воркспейс:
 
-```current/install workspace --path /opt/om/workspace1/manifest.json up```
+```current/install workspace --path /om/workspace1/manifest.json up```
 
 ![](./pictures/sshPutty7.jpg)
 

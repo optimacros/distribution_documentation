@@ -3,14 +3,14 @@
 В случае необходимости изменения адреса воркспейса Optimacros, для начала следует остановить работу воркспейса. Это можно сделать 
 при помощи команды (более подробная информация по остановке воркспейса смотрите [здесь](refresh.md)):
 
-```/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown```
+```/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown```
 
 ![](./pictures/sshPutty3.jpg)
 
 Далее нам необходимо изменить данные в .ENV файле для правильной работы nginx, за которым стоит сам Login Center. Для 
 этого перейдём в директорию с Логин Центром с помощью команды:
 
-`cd /opt/om/login-center/`
+`cd /om/login-center/`
 
 В директории с Логин Центром находится файл .ENV, можем посмотреть его содержимое с помощью команды:
 
@@ -118,7 +118,7 @@ db.workspace.updateOne(
 Далее нам необходимо внести изменения в файл манифеста самого воркспейса. Перейдём в директорию воркспейса, для этого 
 вводим команду:
 
-`cd /opt/om/worspace1/`
+`cd /om/worspace1/`
 
 Находясь в этой директории, мы можем открыть для редактирования файл манифеста с помощью команды:
 
@@ -185,7 +185,7 @@ db.workspace.updateOne(
 
 Затем запускаем работу воркспейса командой:
 
-```/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json up```
+```/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json up```
 
 ![](./pictures/sshPutty7.jpg)
 

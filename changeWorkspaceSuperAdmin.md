@@ -42,8 +42,8 @@
 Перезагружаем:
 
 ```
-/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown
-/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json up
+/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown
+/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json up
 ```
 
 Указанная УЗ будет автоматически создана при ее отсутствии на воркспейсе.

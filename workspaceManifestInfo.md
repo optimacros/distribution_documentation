@@ -353,8 +353,8 @@ use ntlmv2 = yes
     "web": {
         "url": "https://test.example.com",
         "ssl": {
-            "cert": "/opt/om/workspace1/cert/bundle.crt",
-            "key": "/opt/om/workspace1/cert/crt.key"
+            "cert": "/om/workspace1/cert/bundle.crt",
+            "key": "/om/workspace1/cert/crt.key"
         }
     }
     ...

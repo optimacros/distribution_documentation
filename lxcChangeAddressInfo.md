@@ -3,7 +3,7 @@
 В случае если у нас уже имееется рабочийц воркспейс, то первое, что нужно сделать это остановить работу воркспейса. Это 
 можно сделать при помощи команды (более подробная информация по остановке воркспейса смотрите [здесь](refresh.md)):
                                                            
-```/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown```
+```/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown```
 
 ![](./pictures/sshPutty3.jpg)
 
@@ -41,13 +41,13 @@ IP адрес должен быть таким каким мы указали в
 
 После этого нам необзодимо открыть манифест файл воркспейса и изменить в нём адрес в самом верхнее поле.
 
-Открываем файл манифеста дял редактирования при помощи команды `nano /opt/om/workspace1/manifest.json` и редактируем:
+Открываем файл манифеста дял редактирования при помощи команды `nano /om/workspace1/manifest.json` и редактируем:
 
 ![](./pictures/changeContainerIp.jpg)
 
 После этого сохраняем изменения и затем запускаем работу воркспейса. Используем команду: 
 
-```/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json up```
+```/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json up```
 
 ![](./pictures/sshPutty7.jpg)
 
@@ -63,13 +63,13 @@ IP адрес должен быть таким каким мы указали в
 
 Затем нам нужно ищзменить ip адрес воркспейса в логин центра в .ENV файле. Вводим команду:
 
-`nano /opt/om/login-center/.env`
+`nano /om/login-center/.env`
 
 В файлике .ENV изменяем IP адрес в поле `WORKSPACE_PROXY_URL:` в нашем случае на `192.168.0.15` и созраняем изменения.
 
 И перезагружаем логин центр, введя команды последовательно:
 
-`cd /opt/om/login-center/`
+`cd /om/login-center/`
 
 `./om stop web`
 

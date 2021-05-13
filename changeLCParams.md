@@ -3,14 +3,14 @@
 В случае необходимости изменения адреса Логин Центра, для начала следует остановить работу воркспейса. Это можно сделать 
 при помощи команды (более подробная информация по остановке воркспейса смотрите [здесь](refresh.md)):
 
-```/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown```
+```/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown```
 
 ![](./pictures/sshPutty3.jpg)
 
 Далее нам необходимо изменить данные в .ENV файле для правильной работы nginx, за которым стоит сам Login Center. Для 
 этого перейдём в директорию с логин центром с помощью команды:
 
-`cd /opt/om/login-center/`
+`cd /om/login-center/`
 
 Затем остановим работу логин центра с помощью команды:
 
@@ -45,7 +45,7 @@ WORKSPACE_HOSTNAME - при смене адреса воркспейса
 
 Далее в случае смены адреса Логин Центра нам необходимо изменить manifest файл воркспейса, переходим в директорию с файлом манифеста при помощи команды:
 
-`cd /opt/om/worspace1/`
+`cd /om/worspace1/`
 
 Находясь в этой директории, мы можем открыть для редактирования файл манифеста с помощью команды:
 
@@ -113,7 +113,7 @@ WORKSPACE_HOSTNAME - при смене адреса воркспейса
 После этого нам остаётся вновь запустить Логин центр и возобновить работу воркспейса. Переходим в директорию Логин 
 Центра с помощью команды:
 
-`cd /opt/om/login-center/`
+`cd /om/login-center/`
 
 Затем запускаем Логин Центр командой:
 
@@ -121,7 +121,7 @@ WORKSPACE_HOSTNAME - при смене адреса воркспейса
 
 Затем запускаем работу воркспейса командой:
 
-```/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json up```
+```/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json up```
 
 ![](./pictures/sshPutty7.jpg)
 
