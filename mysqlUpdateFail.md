@@ -80,7 +80,7 @@ OR unix_socket;
 
 ![](./pictures/containerExit.jpg)
 
-Далее нужно перейти в директорию с нашим инсталятором воркспейса и выполнить штатную остановку воркспейса, но с флагом
+Далее нужно перейти в директорию с нашим инсталлятором воркспейса и выполнить штатную остановку воркспейса, но с флагом
 `force` т.е. команда будет выглядеть таким образом:
 
 `/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown --force`
