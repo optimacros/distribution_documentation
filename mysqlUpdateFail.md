@@ -10,7 +10,7 @@
 
 Первое что нам необходимо сделать после подключения по ssh это перейти в директорию с контейнером с помощью команды:
 
-`cd /opt/om/workspace1`
+`cd /om/workspace1`
 
 Затем подключаемся к вагрант контейнеру с помощью команды:
 
@@ -80,14 +80,14 @@ OR unix_socket;
 
 ![](./pictures/containerExit.jpg)
 
-Далее нужно перейти в директорию с нашим инсталятором воркспейса и выполнить штатную остановку воркспейса, но с флагом
+Далее нужно перейти в директорию с нашим инсталлятором воркспейса и выполнить штатную остановку воркспейса, но с флагом
 `force` т.е. команда будет выглядеть таким образом:
 
-`/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown --force`
+`/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown --force`
 
 После этого можно поднимать воркспейс:
 
-`/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json up`
+`/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json up`
 
 На этом всё, проблема решена.
 

@@ -1,23 +1,23 @@
 # Резервное копирование воркспейса и разворачивание его из резервной копии:
 
-Имеется установленный воркспейс. Данный воркспейс в директории /opt/om/workspace1.
+Имеется установленный воркспейс. Данный воркспейс в директории /om/workspace1.
 
 Первое что нам необходимо сделать это остановить работу воркспейса:
 
 Переходим в директории с установленным Optimacros:
 
-`cd /opt/om/`
+`cd /om/`
 
 Затем останавливаем работу воркспейса при помощи команды:
 
-`/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown`
+`/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown`
 
 ![](./pictures/sshPutty4.jpg)
 
 Тем самым мы фиксируем текущее состояние воркспейса и во время этого процесса остановки, автоматически делаются бекапы 
 моделей.
 
-Затем мы делаем архивирование директории с воркспейсом, которая находится по пути /opt/om/workspace1
+Затем мы делаем архивирование директории с воркспейсом, которая находится по пути /om/workspace1
 
 `tar -czpf workspace2.tar.gz`
 
@@ -30,7 +30,7 @@
 
 Делаем Up для этой (распакованной) папки воркспейса с именем workspace2
 
-`/opt/om/workspace-installer/current/install workspace --path /путьВДиректориюКоторуюМыРаспаковалиАрхив/workspace2/manifest.json shutdown`
+`/om/workspace-installer/current/install workspace --path /путьВДиректориюКоторуюМыРаспаковалиАрхив/workspace2/manifest.json shutdown`
 
 ![](./pictures/sshPutty7.jpg)
 

@@ -5,11 +5,11 @@
 В тестовых целях будучи в браузере с открытым логин центром, предварительно можете создать пользователя в разделе 
 Users.
 
-Имеется установленный логин центр. Данный логин центр находится в директории /opt/om/login-center.
+Имеется установленный логин центр. Данный логин центр находится в директории /om/login-center.
 
 Если имеется запущенный воркспейс, то для него нужно предварительно запустить команду shutdown.
 
-`/opt/om/workspace-installer/current/install workspace --path /opt/om/workspace1/manifest.json shutdown`
+`/om/workspace-installer/current/install workspace --path /om/workspace1/manifest.json shutdown`
 
 // Здесь будет скриншот
 
@@ -19,7 +19,7 @@ Users.
 
 Переходим в директорию с установленным логин центром:
 
-`cd /opt/om/login-center`
+`cd /om/login-center`
 
 // Здесь будет скриншот
 
@@ -34,7 +34,7 @@ Users.
 Тем самым мы фиксируем текущее состояние логин центра.
 
 Затем мы выходим в директорию om и делаем архивирование директории с логин центром, которая находится по пути 
-/opt/om/login-center
+/om/login-center
 
 `tar -czpf login-center2.tar.gz`
 
