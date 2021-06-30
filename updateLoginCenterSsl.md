@@ -38,7 +38,7 @@ Error response from daemon: configured logging driver does not support reading
 
 Меняем тип драйвера логирования, для этого редактируем файл docker-compose `<LC_DIR>/app/web/docker-compose.yml`
 
-Файл в формате `yml`, находим секцию `nginx` и меняем в под-секции `logging`, значение `driver` на `local`
+Файл в формате `yml`, находим секцию `nginx` и меняем в под-секции `logging`, значение свойства `driver` на `local`
 
 Сохраняем файл и запускаем команды для перезагрузки веб-сервера:
 ```
