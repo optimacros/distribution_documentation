@@ -21,5 +21,8 @@
 19. [Как изменить подсеть LXC](lxcChangeAddressInfo.md)
 20. [Как изменить директорию с данными для Docker и LXC](dockerAndLxcChangeDataFolder.md)
 21. [Особенности установки на ALT Server 9](installToAltServer.md)
+22. [Перезагрузка воркспейса](restartWorkspace.md)
+23. [Изменение SSL сертификата Воркспейса](updateWorkspaceSsl.md)
+24. [Изменение SSL сертификата Воркспейса](updateWorkspaceSsl.md)
 
 [Вернуться к оглавлению <<](index.md)
