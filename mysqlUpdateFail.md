@@ -44,7 +44,7 @@ ALTER USER `root`@`localhost`
 
 IDENTIFIED VIA mysql_native_password
 
-USING PASSWORD("bPy89eEN8iojjg9Fz49#")
+USING PASSWORD("syeAIuL4S5Sw9t9")
 
 OR unix_socket;
 ```
