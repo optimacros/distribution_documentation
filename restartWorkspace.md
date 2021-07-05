@@ -6,11 +6,11 @@
 Останавливаем воркспейс:
 
 ```
-<WS_INSTALLER_DIR>/install workspace --path <WS_DIR>/manifest.json shutdown
+sudo <WS_INSTALLER_DIR>/install workspace --path <WS_DIR>/manifest.json shutdown
 ```
 
 Запускаем воркспейс:
 
 ```
-<WS_INSTALLER_DIR>/install workspace --path <WS_DIR>/manifest.json up
+sudo <WS_INSTALLER_DIR>/install workspace --path <WS_DIR>/manifest.json up
 ```
