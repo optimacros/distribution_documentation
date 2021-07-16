@@ -49,13 +49,18 @@ db.workspace.find({})
 
 ```
 db.workspace.insertOne({
-    "id" : "8522aedecc6b4219ee87ee28",
-    "name" : "TEST",
-    "domains" : [ 
-        "om.test.workspace.ru"
-    ],
-    "authenticationRedirectUrl" : "https://om.test.workspace.ru/auth?token={userToken}",
-    "token" : "4aed337a0ac34dd13716c476a4c7"
+  "id": "477182c89c7abb4ce434451361df",
+  "name": "ATOMS",
+  "locations": [
+    {
+      "userUrl": {
+        "id": "b5be4d7ab271778c09fe868fee9c",
+        "url": "https://ws888.optimacros.com/",
+        "authenticationUrl": "auth?token={userToken}"
+      }
+    }
+  ],
+  "token": "f5df0e3b6e8e29ef30c981a6e442"
 })
 ```
 
