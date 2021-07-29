@@ -70,7 +70,7 @@ OR unix_socket;
 Повторяем действия по обновлению из инструкции выше, заменяя сервис `mariadb` на `mariadb@oltp`, например
 
 ```
-`systemctl restart mariadb@oltp`
+systemctl restart mariadb@oltp
 ```
 
 Команду `mysql_upgrade` выполняем с флагом, который указывает на конфигурацию
