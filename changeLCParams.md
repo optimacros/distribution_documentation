@@ -24,19 +24,8 @@
 
 Теперь для изменения данных Логин Центра, нам нужно изменить соответствующие поля, инструкция с обозначениями полей ниже:
 
-тест ссылка [тут](envDescription.md){:target="_blank"}
-```
-VERSION - изменять нельзя
-HOSTNAME - при смене адреса Login Center
-DB_USERNAME - при смене имени пользователя MongoDB
-DB_PASSWORD - при смене пароля MongoDB
-GRAYLOG_PASSWORD - достаточно для смены пароля администратора http://HOSTNAME/logs
-GRAYLOG_PASSWORD_SHA2 - всегда должен соответвовать SHA256 параметра GRAYLOG_PASSWORD
-ADMIN_USERNAME - не используется после первого запуска Login Center
-ADMIN_PASSWORD - не используется после первого запуска Login Center
-WORKSPACE_NAME - не используется после первого запуска Login Center
-WORKSPACE_HOSTNAME - при смене адреса воркспейса
-```
+Более подробное описание полей можно посмотреть тут:
+<a href="https://github.com/optimacros/distribution_documentation/blob/main/envDescription.md" target="_blank">ссылка на описание полей .env</a>
 
 Чтобы отредактировать файл .ENV воспользуйтесь командой:
 

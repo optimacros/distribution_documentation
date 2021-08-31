@@ -18,13 +18,13 @@ apt-get install -y build-essential sudo md5deep uuid zip unzip curl dirmngr soft
 lxc lxc-templates cgroup-lite libvirt-clients debootstrap redir bridge-utils libc6 \
 dnsmasq nano
 
-# Устанавливаем vagrant пакет
+# Устанавливаем vagrant пакет (необходима именно данная версия)
 cd /tmp
 wget -c https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
 dpkg -i vagrant_2.2.4_x86_64.deb
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://nextcloud.optimacros.com/s/eTrjXGSYDcCGyST/download -O vagrant-lxc.tar.gz
+wget -c https://nextcloud.optimacros.com/s/M63aB6E2MJcgirL/download -O vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 ```

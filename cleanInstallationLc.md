@@ -8,7 +8,7 @@
 
 Затем скачиваем дистрибутив Логин Центра через терминал с помощью команды: 
 
-`wget https://nextcloud.optimacros.com/s/iRtXDicQGye4RHG/download -O ИМЯ_ФАЙЛА.С_РАСШИРЕНИЕМ`
+`wget ссылкуНеобходимоЗапроситьУТехническогоОтделаOptimacros/download -O ИМЯ_ФАЙЛА.С_РАСШИРЕНИЕМ`
 
 ![](./pictures/wget.png)
 
@@ -76,6 +76,9 @@ WORKSPACE_NAME=workspace1
 WORKSPACE_HOSTNAME=workspace1.optimacros.com
 ```
 
+Более подробное описание полей можно посмотреть тут:
+<a href="https://github.com/optimacros/distribution_documentation/blob/main/envDescription.md" target="_blank">ссылка на описание полей .env</a>
+
 Для пароля базы данных (DB_PASSWORD) воспользуемся любым генератором паролей в интернете (http://www.onlinepasswordgenerator.ru/), сгенерировав надёжный пароль длиной более 
 20 символов (ОЧЕНЬ важно: пароль не должен содержать символа @ это приведёт к багу установки). Для инструмента graylog так же генерируем пароль(GRAYLOG_PASSWORD), а затем генерируем к нему sha хэш пароль (GRAYLOG_PASSWORD_SHA2), воспользовавшись 
 сервисом: http://emn178.github.io/online-tools/sha256.html. После настройки всех пунктов, сохраняем наши изменения в 
@@ -100,7 +103,7 @@ WORKSPACE_HOSTNAME=workspace1.optimacros.com
 
 ![](./pictures/installComplete.png)
 
-
+Можно проверять результат установки в браузере введя имя хоста нашего логин центра.
 
 [Вернуться к содержанию <](contents.md)
 
