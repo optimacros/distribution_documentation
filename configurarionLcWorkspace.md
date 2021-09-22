@@ -15,7 +15,7 @@
 
 ![](./pictures/addedVariable.png)
 
-Переходим к настройки Reverse Proxy для Воркспейса.
+Переходим к настройке Reverse Proxy для Воркспейса.
 
 Нам необходимо залить на сервер шаблоны nginx в папку `/om/login-center/data/nginx/templates`
 
