@@ -1,0 +1,6 @@
+server {
+    listen 80;
+    server_name ${NGINX_WORKSPACE_HOST};
+
+    return 301 https://${NGINX_WORKSPACE_HOST}$request_uri;
+}
