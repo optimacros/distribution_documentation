@@ -26,5 +26,6 @@
 24. [Перезагрузка воркспейса](restartWorkspace.md)
 25. [Изменение SSL сертификата Логин Центра](updateLoginCenterSsl.md)
 26. [Изменение SSL сертификата Воркспейса](updateWorkspaceSsl.md)
+27. [Изменение подсети Docker Логин Центра](changeDockerLcNetwork.md)
 
 [Вернуться к оглавлению <<](index.md)
