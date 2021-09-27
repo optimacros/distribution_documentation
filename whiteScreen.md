@@ -16,7 +16,7 @@
 красный статус (failed).
 - Перезагружаем сервис `systemctl restart ws-server`
 - Смотрим статус сервиса, теперь он должен быть зеленым `systemctl status ws-server`
-- Входим под пользователя `optimacros_middlework su optimacros_middlework`
+- Входим под пользователя `optimacros_middlework` `su optimacros_middlework`
 - Переходим в директорию приложения `cd ~/optimacros_middlework`
 - Выполняем команду `console/command workspace-maintenance --stop`
 - Проверяем результат в браузере
