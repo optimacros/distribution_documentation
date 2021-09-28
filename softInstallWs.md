@@ -74,6 +74,48 @@ unzip redir_3.3_centos8_x86_64.zip
 cp redir /usr/bin/redir
 chmod +x /usr/bin/redir
 ```
+
+### Для работы воркспейса на операционной системе RHEL.
+
+Тело bash скрипта для установки пакетов на RHEL:
+
+```
+#!/bin/bash
+
+# Инструкция тестировалась на RHEL 8
+# Требует запуск под root пользователем
+# Версия: 2
+
+set -ex
+
+cd /tmp
+
+# Должен быть предустановлен репозиторий Epel (Проверьте его наличие командой `yum repolist`)
+
+yum -y install nano tar zip unzip curl wget lxc lxc-templates dnsmasq
+
+# Устанавливаем vagrant
+dnf install https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
+vagrant --version
+
+# Включить USE_LXC_BRIDGE в /etc/sysconfig/lxc
+sed -E 's|(USE_LXC_BRIDGE=")false(")|\1true\2|' -i /etc/sysconfig/lxc
+
+# Запуск LXC
+systemctl restart lxc-net
+systemctl enable lxc-net
+
+# Устанавливаем LXC плагин для vagrant
+wget -c https://nextcloud.optimacros.com/s/M63aB6E2MJcgirL/download -O vagrant-lxc.tar.gz
+tar -zxvf vagrant-lxc.tar.gz
+vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
+
+# Устанавливаем redir
+wget -c https://nextcloud.optimacros.com/s/Lrqo5HYa3dQa96E/download -O redir_3.3_centos8_x86_64.zip
+unzip redir_3.3_centos8_x86_64.zip
+cp redir /usr/bin/redir
+chmod +x /usr/bin/redir
+```
   
 [Вернуться к содержанию <](contents.md)
 
