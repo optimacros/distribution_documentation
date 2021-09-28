@@ -73,19 +73,10 @@ wget -c https://nextcloud.optimacros.com/s/Lrqo5HYa3dQa96E/download -O redir_3.3
 unzip redir_3.3_centos8_x86_64.zip
 cp redir /usr/bin/redir
 chmod +x /usr/bin/redir
-¸ есть проблема с дублированием блока конигурации в lxc файле после 
+
+# Есть проблема с дублированием блока конигурации в lxc файле после 
 # рестарта контейнера, то можно использовать фикс 
 # https://github.com/boltronics/vagrant-lxc/commit/ba8d6ac630ba04f9bf017b743af5e8251dd86c84
-
-# Устанавливаем LXC плагин для vagrant
-wget -c https://nextcloud.optimacros.com/s/eTrjXGSYDcCGyST/download -O vagrant-lxc.tar.gz
-tar -zxvf vagrant-lxc.tar.gz
-vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
-
-wget -c https://nextcloud.optimacros.com/s/wqZpZcSD6YcE7LP/download -O redir_3.3_centos8_x86_64.zip
-unzip redir_3.3_centos8_x86_64.zip
-cp redir /usr/bin/redir
-chmod +x /usr/bin/redir
 ```
   
 [Вернуться к содержанию <](contents.md)
