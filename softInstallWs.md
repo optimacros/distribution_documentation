@@ -69,7 +69,7 @@ tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
 # Устанавливаем redir
-wget -c https://nextcloud.optimacros.com/s/wqZpZcSD6YcE7LP/download -O redir_3.3_centos8_x86_64.zip
+wget -c https://nextcloud.optimacros.com/s/Lrqo5HYa3dQa96E/download -O redir_3.3_centos8_x86_64.zip
 unzip redir_3.3_centos8_x86_64.zip
 cp redir /usr/bin/redir
 chmod +x /usr/bin/redir
