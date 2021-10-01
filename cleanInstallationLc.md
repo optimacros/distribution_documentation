@@ -78,7 +78,7 @@ WORKSPACE_HOSTNAME=workspace1.optimacros.com
 <a href="https://github.com/optimacros/distribution_documentation/blob/main/envDescription.md" target="_blank">ссылка на описание полей .env</a>
 
 Для пароля базы данных (DB_PASSWORD) воспользуемся любым генератором паролей в интернете (http://www.onlinepasswordgenerator.ru/), сгенерировав надёжный пароль длиной более 
-20 символов (ОЧЕНЬ важно: пароль не должен содержать символов `@:;/\` это приведёт к багу установки). 
+20 символов (ОЧЕНЬ важно: пароль не должен содержать символов `@:;/\%` это приведёт к багу установки). 
 
 После настройки всех пунктов, сохраняем наши изменения в 
 .env файл.
