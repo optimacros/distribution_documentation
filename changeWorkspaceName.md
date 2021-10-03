@@ -87,19 +87,7 @@ db.workspace.find({})
 Пример команды обновления документа:
 
 ```
-db.workspace.updateOne(
-    {
-        "id": "4aed337a0ac34dd13716c476a4c7"
-    },
-    {
-        $set: {
-            "name": "PROD",
-            "description": "Главный воркспейс",
-            "authenticationRedirectUrl": "https://om.prod.workspace.ru/auth?token={userToken}",
-            "domains": ["om.prod.workspace.ru"]
-        }
-    }
-)
+db.workspace.updateOne({"id": "4aed337a0ac34dd13716c476a4c7"}, {$set: {"name": "PROD", "description": "Главный воркспейс", "authenticationRedirectUrl": "https://om.prod.workspace.ru/auth?token={userToken}", "domains": ["om.prod.workspace.ru"]}})
 ```
 
 После всех манипуляций, с базой вводим:
