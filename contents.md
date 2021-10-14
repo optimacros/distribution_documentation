@@ -27,5 +27,6 @@
 25. [Изменение SSL сертификата Логин Центра](updateLoginCenterSsl.md)
 26. [Изменение SSL сертификата Воркспейса](updateWorkspaceSsl.md)
 27. [Изменение подсети Docker Логин Центра](changeDockerLcNetwork.md)
+28. [Подключение и настройка OLTP на воркспейсе](oltpConfigure.md)
 
 [Вернуться к оглавлению <<](index.md)
