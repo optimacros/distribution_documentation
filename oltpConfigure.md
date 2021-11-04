@@ -26,13 +26,16 @@ manifest.json. Так же нам нужно сгенерировать паро
 
 Текстовый пример блока:
 ```
-"oltp": {
+    "oltp": {
       "mysql": {
         "userPasswords": {
-          "root": "ABGx6z0AQ8GUBGDgfTo2",
-          "admin": "i7KtCnUu5biTWFuAg6v5",
-          "reader": "txQtsjG6t8ooNbh20Yn4",
-          "writer": "OLehofSb3HI3PGgyjiK0"
+          "root": "KI82ElV0qiPKPB174OmV",
+          "admin": "cRwWuFl9sulk3R2s5OiD",
+          "reader": "P9BK4MfKqRtlMc5QXmvU",
+          "writer": "t2XX01RuI6wgHSu1ffVK"
+        },
+        "web": {
+            "status": true
         }
       }
     },
