@@ -15,3 +15,14 @@ sudo <WS_INSTALLER_DIR>/install workspace --path <WS_DIR>/manifest.json shutdown
 ```
 sudo <WS_INSTALLER_DIR>/install workspace --path <WS_DIR>/manifest.json up
 ```
+
+## Force Shutdown
+
+Форсированная остановка контейнера с воркспейсом
+Используется в различных экстренных случаях, например при зависании воркспейса и его панели администрирования
+
+! При форсированной остановке бекап последнего состояния модели сделан не будет, при последующем запуске воркспейса, модели восстановятся на состояние последних доступных бекапов
+
+```
+sudo <WS_INSTALLER_DIR>/install workspace --path <WS_DIR>/manifest.json --force shutdown
+```
