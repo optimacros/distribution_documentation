@@ -28,5 +28,6 @@
 26. [Изменение SSL сертификата Воркспейса](updateWorkspaceSsl.md)
 27. [Изменение подсети Docker Логин Центра](changeDockerLcNetwork.md)
 28. [Подключение и настройка OLTP на воркспейсе](oltpConfigure.md)
+29. [Формула расчёта размера воркспейса](wsSizeFormula.md)
 
 [Вернуться к оглавлению <<](index.md)
