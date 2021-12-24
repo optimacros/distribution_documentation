@@ -4,6 +4,8 @@
 
 Для установки пакетов нужно запустить bash скрипт с содержимым указанным ниже или выполнить эти команды последовательно:
 
+!!!Пакеты vagrant устанавливаются именно тех версий которые указаны в инструкциях.
+
 ```
 #!/bin/bash
 
@@ -28,7 +30,7 @@ wget -c https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
 dpkg -i vagrant_2.2.4_x86_64.deb
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://nextcloud.optimacros.com/s/M63aB6E2MJcgirL/download -O vagrant-lxc.tar.gz
+wget -c https://nextcloud.optimacros.com/s/qpJcRNg2AfbA52S/download -O vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 ```
@@ -64,12 +66,12 @@ systemctl restart lxc-net
 systemctl enable lxc-net
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://nextcloud.optimacros.com/s/M63aB6E2MJcgirL/download -O vagrant-lxc.tar.gz
+wget -c https://nextcloud.optimacros.com/s/qpJcRNg2AfbA52S/download -O vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
 # Устанавливаем redir
-wget -c https://nextcloud.optimacros.com/s/Lrqo5HYa3dQa96E/download -O redir_3.3_centos8_x86_64.zip
+wget -c https://nextcloud.optimacros.com/s/r4RRxyxNJnL7TzN/download -O redir_3.3_centos8_x86_64.zip
 unzip redir_3.3_centos8_x86_64.zip
 cp redir /usr/bin/redir
 chmod +x /usr/bin/redir
@@ -106,7 +108,7 @@ systemctl restart lxc-net
 systemctl enable lxc-net
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://nextcloud.optimacros.com/s/M63aB6E2MJcgirL/download -O vagrant-lxc.tar.gz
+wget -c https://nextcloud.optimacros.com/s/qpJcRNg2AfbA52S/download -O vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
