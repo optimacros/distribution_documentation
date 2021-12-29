@@ -44,11 +44,14 @@
 
  ![](./pictures/modelsLogo.jpg)
 
- 
+
+------------------
 Фавикон на табе:
 
  ![](./pictures/tabsLogo.jpg)
- 
+
+
+------------------ 
 Копирайты в подвале:
 
  ![](./pictures/footerContent.jpg)
