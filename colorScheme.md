@@ -18,7 +18,7 @@
                 "color_scheme_olapsoft", // цветовая схема olapsoft доступна для выбора в настройках
                 "color_scheme_corplan", // цветовая схема corplan доступна для выбора в настройках
                 "color_scheme_orange", // цветовая схема orange доступна для выбора в настройках
-                "interface_language_RU", // руский язык доступен для выбора в настройках
+                "interface_language_RU", // русский язык доступен для выбора в настройках
                 "interface_language_EN", // английский язык доступен для выбора в настройках
                 "support_email_support@optimacros.com", // email для связи support@optimacros.com
             ]
@@ -72,7 +72,7 @@
                 "color_scheme_olapsoft", // цветовая схема olapsoft доступна для выбора в настройках
                 "color_scheme_corplan", // цветовая схема corplan доступна для выбора в настройках
                 "color_scheme_orange", // цветовая схема orange доступна для выбора в настройках
-                "interface_language_RU", // руский язык доступен для выбора в настройках
+                "interface_language_RU", // русский язык доступен для выбора в настройках
                 "interface_language_EN", // английский язык доступен для выбора в настройках
                 "support_email_support@optimacros.com", // email для связи support@optimacros.com
             ]
