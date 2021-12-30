@@ -34,7 +34,7 @@
             "flags": [ <= Флаги
                 "fun_loader_message_off", // отключает "веселые" сообщения при первичной загрузке
                 "interface_theme_optimacros", // интерфейс с тайтлом Optimacros и своим фавиконом
-                "color_scheme_advexcel", // цветовая схема advexcel доступна для выбора в настройках
+                "color_scheme_advexcel", // цветовая схема advexcel доступна для выбора в настройках (первая в списке дефолтная)
                 "color_scheme_optimacros", // цветовая схема optimacros доступна для выбора в настройках
                 "color_scheme_olapsoft", // цветовая схема olapsoft доступна для выбора в настройках
                 "color_scheme_corplan", // цветовая схема corplan доступна для выбора в настройках
@@ -110,7 +110,7 @@
             "flags": [ <= Флаги
                 "fun_loader_message_off", // отключает "веселые" сообщения при первичной загрузке
                 "interface_theme_optimacros", // интерфейс с тайтлом Optimacros и своим фавиконом
-                "color_scheme_advexcel", // цветовая схема advexcel доступна для выбора в настройках
+                "color_scheme_advexcel", // цветовая схема advexcel доступна для выбора в настройках (первая в списке дефолтная)
                 "color_scheme_optimacros", // цветовая схема optimacros доступна для выбора в настройках
                 "color_scheme_olapsoft", // цветовая схема olapsoft доступна для выбора в настройках
                 "color_scheme_corplan", // цветовая схема corplan доступна для выбора в настройках
