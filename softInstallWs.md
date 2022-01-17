@@ -43,7 +43,7 @@ vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 ```
 #!/bin/bash
 
-# Инструкция тестировалась на Centos 8 а так же для CentOS Stream release 8
+# Инструкция тестировалась на Centos 8, а так же для CentOS Stream release 8
 # Требует запуск под root пользователем
 # Версия: 2
 
