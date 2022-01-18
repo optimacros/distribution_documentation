@@ -14,9 +14,7 @@ set -ex
 apt-get update
 
 # Устанавливаем новые пакеты
-apt-get install -y build-essential sudo md5deep uuid zip unzip curl dirmngr software-properties-common \
-lxc lxc-templates cgroup-lite libvirt-clients debootstrap redir bridge-utils libc6 \
-dnsmasq nano
+apt-get install -y lxc lxc-templates bridge-utils redir
 
 # Устанавливаем vagrant пакет (необходима именно данная версия)
 cd /tmp
