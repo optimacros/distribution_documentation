@@ -20,9 +20,7 @@ set -ex
 apt-get update
 
 # Устанавливаем новые пакеты
-apt-get install -y build-essential sudo md5deep uuid zip unzip curl dirmngr software-properties-common \
-lxc lxc-templates cgroup-lite libvirt-clients debootstrap redir bridge-utils libc6 \
-dnsmasq nano
+apt-get install -y software-properties-common lxc lxc-templates bridge-utils redir tar zip unzip curl wget 
 
 # Устанавливаем vagrant пакет
 cd /tmp
@@ -52,7 +50,7 @@ set -ex
 cd /tmp
 
 yum -y install epel-release
-yum -y install nano tar zip unzip curl wget lxc lxc-templates dnsmasq
+yum -y install nano tar zip unzip curl wget lxc lxc-templates
 
 # Устанавливаем vagrant
 dnf install https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
@@ -95,7 +93,7 @@ set -ex
 cd /tmp
 
 yum -y install epel-release
-yum -y install nano tar zip unzip curl wget lxc lxc-templates dnsmasq
+yum -y install nano tar zip unzip curl wget lxc lxc-templates
 
 # Устанавливаем vagrant
 yum install https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
@@ -142,7 +140,7 @@ cd /tmp
 
 # Должен быть предустановлен репозиторий Epel (Проверьте его наличие командой `yum repolist`)
 
-yum -y install nano tar zip unzip curl wget lxc lxc-templates dnsmasq
+yum -y install nano tar zip unzip curl wget lxc lxc-templates
 
 # Устанавливаем vagrant
 dnf install https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
