@@ -1,7 +1,8 @@
 # Требования к клиентским серверам для установки дистрибутивов:
 
-1. [Ubuntu](requirementsUbuntu.md)
-2. [CentOS](requirementsCentOs.md)
+[Предварительные установки ПО необходимые для работы воркспейса Optimacros](softInstallWs.md)
+
+[Предварительные установки ПО необходимые для работы Логин Центра Optimacros](softInstallLc.md)
 
 [Вернуться к содержанию <](contents.md)
 
