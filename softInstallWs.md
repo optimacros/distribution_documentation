@@ -167,7 +167,7 @@ chmod +x /usr/bin/redir
 
 ## Для работы воркспейса на операционной системе ALT Linux 9
 
-[Особенности установки под ALT Linux 9 <](installToAltServer.md)
+[Особенности установки под ALT Linux 9](installToAltServer.md)
   
 [Вернуться к содержанию <](contents.md)
 
