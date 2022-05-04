@@ -28,7 +28,7 @@ wget -c https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
 dpkg -i vagrant_2.2.4_x86_64.deb
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://nextcloud.optimacros.com/s/qpJcRNg2AfbA52S/download -O vagrant-lxc.tar.gz
+wget -c https://nextcloud.optimacros.com/s/oQd7wWk9PqH4tEY/download -O vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 ```
