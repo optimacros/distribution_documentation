@@ -33,5 +33,6 @@
 31. [Принципы работы DNS в LXC контейнере](dnsInLxcContainer.md)
 32. [Как настроить директорию для хранения бекапов моделей (только для версий 1.0.83+)](customBackupsDirectory.md)
 33. [Установка и настройка VBA)](settingsVBA.md)
+34. [Установка AM)](cleanInstallationAm.md)
 
 [Вернуться к оглавлению <<](index.md)
