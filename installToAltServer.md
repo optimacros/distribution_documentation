@@ -74,14 +74,14 @@ rpm -ivh vagrant_2.2.4_x86_64.rpm
 
 ```
 cd /tmp
-wget -c https://nextcloud.optimacros.com/s/eTrjXGSYDcCGyST/download -O vagrant-lxc.tar.gz
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 ```
 
 ## Конфликт портов
 
-При определенной настройке ALT Server 9.1 (зависит от галочек при установке ОС) на порту 8080 может находится веб панель управления сервером, 
+При определенной настройке ALT Server 9.1 (зависит от галочек при установке ОС) на порту 8080 может находится веб панель управления сервером,
 данный порт в случае не https установки используется для вебсокета воркспейса и может быть конфликт портов.
 
 ## Проблемы с разделом диска
@@ -93,7 +93,7 @@ vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
 Пользователь root должен иметь sudo доступ, иначе будет ошибка vagrant lxc обертки
 
-Раскомментируем строчку в  `/etc/sudoers` 
+Раскомментируем строчку в  `/etc/sudoers`
 
 ```
 ##
@@ -112,8 +112,8 @@ root ALL=(ALL) ALL
 
 ### Redir
 
-Для работы форвардинга портов на воркспейсе необходима утилита `redir`. 
-В стандартном репозитории ее нет, поэтому необходимо скачать 
+Для работы форвардинга портов на воркспейсе необходима утилита `redir`.
+В стандартном репозитории ее нет, поэтому необходимо скачать
 исходники и установить ее из исходников
 
 ```
