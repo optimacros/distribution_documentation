@@ -30,7 +30,7 @@
 
 Делаем Up для этой (распакованной) папки воркспейса с именем workspace2
 
-`/om/workspace-installer/current/install workspace --path /путьВДиректориюКоторуюМыРаспаковалиАрхив/workspace2/manifest.json shutdown`
+`/om/workspace-installer/current/install workspace --path /путьВДиректориюКоторуюМыРаспаковалиАрхив/workspace2/manifest.json up`
 
 ![](./pictures/sshPutty7.jpg)
 
