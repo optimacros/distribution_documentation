@@ -7,7 +7,7 @@
 
 RHEL и CentOS с 2018 года отсказались от использования Docker в пользу Podman, при попытке установки Docker 
 из официального репозитория ОС, устанавливается Podman. В связи с этим установку Docker нужно производить из официального репозитория Docker:
-https://docs.docker.com/engine/install/rhel/
+https://docs.docker.com/engine/install/
 
 
   
