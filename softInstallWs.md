@@ -28,7 +28,7 @@ wget -c https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
 dpkg -i vagrant_2.2.4_x86_64.deb
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
@@ -83,7 +83,7 @@ wget -c https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
 dpkg -i vagrant_2.2.4_x86_64.deb
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 ```
@@ -119,7 +119,7 @@ systemctl restart lxc-net
 systemctl enable lxc-net
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
@@ -162,7 +162,7 @@ systemctl restart lxc-net
 systemctl enable lxc-net
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
@@ -209,7 +209,7 @@ systemctl restart lxc-net
 systemctl enable lxc-net
 
 # Устанавливаем LXC плагин для vagrant
-wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
@@ -261,7 +261,7 @@ dpkg -i redir_3.2-1_amd64.deb
 
 # Устанавливаем утилиту Vagrant для управления LXC контейнерами
 wget https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb
-wget https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
+wget https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
 
 dpkg -i vagrant_2.2.4_x86_64.deb
 tar -zxvf vagrant-lxc.tar.gz
