@@ -177,7 +177,7 @@ chmod +x /usr/bin/redir
 # Флаг для переключения скрипта в strict mode (остановка скрипта при ошибках)
 set -ex
 
-# раскоментаровать или добавить параметр в /etc/systemd/logind.conf
+# раскомментировать или добавить параметр в /etc/systemd/logind.conf
 
 if [[ $(grep 'KillUserProcesses' /etc/systemd/logind.conf) ]]; then sed -i '/KillUserProcesses/s/^#//' /etc/systemd/logind.conf; sed -i '/KillUserProcesses/s/yes/no/' /etc/systemd/logind.conf; else echo 'KillUserProcesses=no' >> /etc/systemd/logind.conf; fi
 
