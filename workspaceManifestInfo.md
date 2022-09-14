@@ -273,6 +273,29 @@ port = 1433
 use ntlmv2 = yes
 ```
 
+### Proxy
+
+`object`
+
+Параметр позволяет настроить proxy для сервисов. 
+
+```
+{
+    ...
+    "proxy": {
+        "http": "http://test1.com",
+        "https": "https://test2.com",
+        "ftp": "ftp://test3.com",
+        "ignore": [
+            "http://test4.com",
+            "http://test5.com"
+        ]
+    }
+    ...
+}
+
+```
+
 ## Блок `workspace`
 
 Блок `workspace` позволяет настроить работу воркспейс приложения Optimacros внутри контейнера.
