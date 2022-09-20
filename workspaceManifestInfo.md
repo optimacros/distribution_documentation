@@ -72,6 +72,12 @@
 }
 ```
 
+### Gateway
+
+`string`
+
+Адрес шлюза контейнера в формате IPv4. Значение по умолчания - 10.0.3.1
+
 ### CPU
 
 `required|integer`
@@ -273,6 +279,51 @@ port = 1433
 use ntlmv2 = yes
 ```
 
+### Tunnel
+
+`object`
+
+```
+{
+    ...
+    "tunnel": {
+        "status": true
+    }
+    ...
+}
+```
+
+### Limits
+
+`object`
+
+```
+{
+    ...
+    "limits": {
+        "nofile": 123,
+        "nproc": 123
+    }
+    ...
+}
+```
+
+### Synced Folders
+
+`object`
+
+```
+{
+    ...
+    "syncedFolders": {
+       "^[a-z0-9_]+$": {
+           "externalPath": "path/to/folder"
+       }
+    }
+    ...
+}
+```
+
 ### Proxy
 
 `object`
@@ -293,7 +344,6 @@ use ntlmv2 = yes
     }
     ...
 }
-
 ```
 
 ## Блок `workspace`
@@ -423,6 +473,283 @@ use ntlmv2 = yes
     "admin": {
         "email": "admin@optimacros.com"
     }
+    ...
+}
+```
+
+### Console
+
+`object`
+
+```
+{
+    ...
+    "commands": {
+        "cxp-build": {
+            "user": "username",
+            "token": "token123"
+        },
+        "encode-source": {
+            "user": "username",
+            "token": "token123"
+        },
+        "cppmw-build": {
+            "user": "username",
+            "token": "token123"
+        },
+        "frontend-build": {
+            "user": "username",
+            "token": "token123",
+            "autoBuildOnContainerStart": true,
+            "appConfig": {
+                "socketSecurityPort": 1111,
+                "socketPort": 2222
+            },
+            "relativeUrlPrefix": "urlprefix/"
+        },
+        "container-workspace-setting-update": {
+            "excludeCubesInfo": true,
+            "excludeDashboardDefinition": true,
+            "excludeContextTableDefinition": true
+        },
+        "container-php-config-update": {
+            "opcache": {
+                "status": true
+            }
+        },
+        "container-app-config-update": {
+            "lockModelStatus": true,
+            "smtp": {
+                "maxAttachmentSize": 50000000
+            }
+        }
+    }
+    ...
+}
+```
+
+### Backup Archive
+
+`object`
+
+```
+{
+    ...
+    "backupArchive": {
+        "status": true
+    }
+    ...
+}
+```
+
+### Services
+
+`object`
+
+```
+{
+    ...
+    "services": {
+        "units": {
+            "properties": {
+                "storageRouter": {
+                    "instanceCount": 1
+                }
+            }
+        }
+    }
+    ...
+}
+```
+
+### Shared Folders
+
+`object`
+
+```
+{
+    ...
+    "sharedFolders": {
+        "^[a-z0-9_]+$": {
+            "src": "path/to/folder",
+            "flags": [
+                "DENY_ACCESS_FROM_MACROS_ENV"
+            ]
+        }
+    }
+    ...
+}
+```
+
+### Flags
+
+`string[]`
+
+```
+{
+    ...
+    "flags": [
+        "flag1",
+        "flag2",
+    ]
+    ...
+}
+```
+
+### WinAgent
+
+`object`
+
+```
+{
+    ...
+    "winAgent": {
+        "commandUrl": "url",
+        "downloadUrl": "url",
+        "auth": {
+            "type": "basic|digest|ntlm",
+            "user": "username",
+            "password": "pass"
+        }
+    }
+    ...
+}
+```
+
+### Mysql
+
+`object`
+
+```
+{
+    ...
+    "memory": 123,
+    "userPasswords": {
+        "root": "pass",
+        "optimacros": "pass"
+    }
+    ...
+}
+```
+
+### Oltp
+
+`object`
+
+```
+{
+    ...
+    "mysql": {
+        "memory": 123,
+        "userPasswords": {
+            "root": "pass",
+            "admin": "pass",
+            "phpmyadmin": "pass",
+            "writer": "pass",
+            "reader": "pass"
+        },
+        "web": {
+            "status": true,
+            "captcha": {
+                "publicKey": "key",
+                "privateKey": "key"
+            }
+        }
+    }
+    ...
+}
+```
+
+### Mongod
+
+`object`
+
+```
+{
+    ...
+    "mongodb": {
+        "userPasswords": {
+            "admin": "pass",
+            "optimacros": "pass"
+        }
+    }
+    ...
+}
+```
+
+### Influxdb
+
+`object`
+
+```
+{
+    ...
+    "influxdb": {
+        "userPasswords": {
+            "optimacros": "pass"
+        }
+    }
+    ...
+}
+```
+
+### Audit
+
+`object`
+
+```
+{
+    ...
+    "audit": {
+        "status": true,
+        "saveClientRequestMessage": true,
+        "saveClientResponseMessage": true,
+        "mongodb": {
+            "dsn": "dsn"
+        },
+        "worker": {
+            "count": 5
+        },
+        "logger": {
+            "count": 5
+        },
+        "nginx": {
+            "realIpHeader": "X-Forwarded-For",
+            "allowRealIpFrom": [
+                "255.255.255.255",
+                "0.0.0.0"
+            ]
+        },
+    }
+    ...
+}
+```
+
+### Server Status
+
+`object`
+
+```
+{
+    ...
+    "serverStatus": {
+        "status": {
+            "refresh": 1,
+            "retention": 7
+        },
+    }
+    ...
+}
+```
+
+### Model Allowed Unsaved Interval
+
+`integer`
+
+```
+{
+    ...
+    "modelAllowedUnsavedInterval": 10800
     ...
 }
 ```
