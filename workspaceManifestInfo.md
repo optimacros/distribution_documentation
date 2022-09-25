@@ -283,6 +283,8 @@ use ntlmv2 = yes
 
 `object`
 
+status - если включен, система будет использовать vpn, настроенный на хост-машине. 
+
 ```
 {
     ...
@@ -296,6 +298,10 @@ use ntlmv2 = yes
 ### Limits
 
 `object`
+
+nofile - количество дескрипторов https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Process Properties
+
+nproc - ограничивает количество дочерних systemd процессов https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Process%20Properties
 
 ```
 {
@@ -311,6 +317,10 @@ use ntlmv2 = yes
 ### Synced Folders
 
 `object`
+
+^[a-z0-9_]+$ - Вместо регулярки подставить id встроенной папки, по которому к ней можно будет обращаться.
+
+^[a-z0-9_]+$.externalPath - Путь до встраиваемой папки на хост-машине (вне vagrant контейнера).
 
 ```
 {
@@ -532,6 +542,8 @@ use ntlmv2 = yes
 
 `object`
 
+status - если true, то при удалении модели происходит предварительное сохранение ее бэкапа. 
+
 ```
 {
     ...
@@ -566,6 +578,10 @@ use ntlmv2 = yes
 
 `object`
 
+^[a-z0-9_]+$ - Вместо регулярного выражения подставить id встроенной папки, по которому к ней можно будет обращаться.
+
+src - Путь до встраиваемой папки на хост-машине (вне vagrant контейнера).
+
 ```
 {
     ...
@@ -585,6 +601,8 @@ use ntlmv2 = yes
 
 `string[]`
 
+Позволяет указать массив любых строк, которые будут отображаться в admin/settings в виде флагов. Например, можно передавать строку “ok”, если с воркспэйсом все в порядке. 
+
 ```
 {
     ...
@@ -599,6 +617,17 @@ use ntlmv2 = yes
 ### WinAgent
 
 `object`
+
+commandUrl - устанавливает url агента, на который будут подаваться команды.
+
+downloadUrl - устанавливает url, по которому можно будет скачивать результирующие документы.
+
+auth.type - тип аутентификации, по которому можно будет подключиться к winAgent. Значение должно быть одним из трех: "basic", "digest", "ntlm".
+
+auth.user - имя пользователя, под которым можно установить соединение с winagent.
+
+auth.password - пароль для этого пользователя.
+
 
 ```
 {
@@ -620,6 +649,8 @@ use ntlmv2 = yes
 
 `object`
 
+memory - то же самое, что и oltp.mysql.memory.
+
 ```
 {
     ...
@@ -636,23 +667,31 @@ use ntlmv2 = yes
 
 `object`
 
+mysql.memory - объем памяти, используемый для кэширования. Чем больше выделено памяти на кэширование - тем больше производительность работы с базой. Под капотом устанавливает значение для innodb_buffer_pool_size.
+
+mysql.web.status - позволяет включить или выключить доступ к базе через phpmyadmin.
+
+mysql.web.captcha - позволяет настроить google recaptcha капчу при входе в phpmyadmin.
+
 ```
 {
     ...
-    "mysql": {
-        "memory": 123,
-        "userPasswords": {
-            "root": "pass",
-            "admin": "pass",
-            "phpmyadmin": "pass",
-            "writer": "pass",
-            "reader": "pass"
-        },
-        "web": {
-            "status": true,
-            "captcha": {
-                "publicKey": "key",
-                "privateKey": "key"
+    "oltp": {
+        "mysql": {
+            "memory": 123,
+            "userPasswords": {
+                "root": "pass",
+                "admin": "pass",
+                "phpmyadmin": "pass",
+                "writer": "pass",
+                "reader": "pass"
+            },
+            "web": {
+                "status": true,
+                "captcha": {
+                    "publicKey": "key",
+                    "privateKey": "key"
+                }
             }
         }
     }
@@ -697,6 +736,18 @@ use ntlmv2 = yes
 
 `object`
 
+status - позволяет включить или выключить аудит.
+
+saveClientRequestMessage - сохранять ли пользовательские запросы в аудит.
+
+saveClientResponseMessage - сохранять ли ответы, отсылаемые пользователям в аудит.
+
+mongodb.dsn - определяет dsn для подключения к базе аудита mongodb (формат: `mongodb://{hostname}:{port}/{authenticationDatabase}`).
+
+logger.count - количество инстансов-сервисов логгеров аудита, которое будет запущено.
+
+worker.count - количество инстансов-сервисов воркеров аудита, которое будет запущено.
+
 ```
 {
     ...
@@ -713,21 +764,40 @@ use ntlmv2 = yes
         "logger": {
             "count": 5
         },
-        "nginx": {
-            "realIpHeader": "X-Forwarded-For",
-            "allowRealIpFrom": [
-                "255.255.255.255",
-                "0.0.0.0"
-            ]
-        },
     }
     ...
+}
+```
+
+### Nginx
+
+`object`
+
+realIpHeader - http://nginx.org/ru/docs/http/ngx_http_realip_module.html#set_real_ip_from
+
+allowRealIpFrom - http://nginx.org/ru/docs/http/ngx_http_realip_module.html#real_ip_header
+
+```
+{
+    ...
+    "nginx": {
+        "realIpHeader": "X-Forwarded-For",
+        "allowRealIpFrom": [
+            "255.255.255.255",
+            "0.0.0.0"
+        ]
+    }  
+    ...  
 }
 ```
 
 ### Server Status
 
 `object`
+
+retention - определяет количество дней, после истечении которых, данные метрики influxdb считаются устаревшими и могут быть удалены. Значение по умолчанию - 7 дней, минимум - 1 день.
+
+refresh - как часто монитор показателей сервера будет обновляться. Указывается в секундах. Значение по умолчанию - 1 секунда, минимум - 1 секунда.  
 
 ```
 {
@@ -745,6 +815,8 @@ use ntlmv2 = yes
 ### Model Allowed Unsaved Interval
 
 `integer`
+
+Определяет количество времени от последнего сохранения модели, после исчерпания которого модель будет помечена как подверженная риску до следующего сохранения. Значение по умолчанию - 10800. 
 
 ```
 {
