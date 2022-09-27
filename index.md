@@ -3,3 +3,4 @@
 1. [Введение](getting-started.md)
 2. [Содержание](contents.md)
 3. [Экспертиза](expertise.md)
+4. [Прочее](other/index.md)
