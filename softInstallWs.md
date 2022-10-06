@@ -69,7 +69,7 @@ tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
 # Устанавливаем redir
-wget -c https://nextcloud.optimacros.com/s/r4RRxyxNJnL7TzN/download -O redir_3.3_centos8_x86_64.zip
+wget -c https://nextcloud.optimacros.com/s/j3Xwn2MGzsLRTES/download -O redir_3.3_centos8_x86_64.zip
 unzip redir_3.3_centos8_x86_64.zip
 cp redir /usr/bin/redir
 chmod +x /usr/bin/redir
@@ -112,7 +112,7 @@ tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
 # Устанавливаем redir
-wget -c https://nextcloud.optimacros.com/s/r4RRxyxNJnL7TzN/download -O redir_3.3_centos8_x86_64.zip
+wget -c https://nextcloud.optimacros.com/s/j3Xwn2MGzsLRTES/download -O redir_3.3_centos8_x86_64.zip
 unzip redir_3.3_centos8_x86_64.zip
 cp redir /usr/bin/redir
 chmod +x /usr/bin/redir
@@ -159,7 +159,7 @@ tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 
 # Устанавливаем redir
-wget -c https://nextcloud.optimacros.com/s/Lrqo5HYa3dQa96E/download -O redir_3.3_centos8_x86_64.zip
+wget -c https://nextcloud.optimacros.com/s/j3Xwn2MGzsLRTES/download -O redir_3.3_centos8_x86_64.zip
 unzip redir_3.3_centos8_x86_64.zip
 cp redir /usr/bin/redir
 chmod +x /usr/bin/redir
@@ -245,6 +245,62 @@ systemctl restart lxc-net
 ## Для работы воркспейса на операционной системе ALT Linux 9
 
 [Особенности установки под ALT Linux 9](installToAltServer.md)
+
+## Для работы воркспейса на операционной системе РЕД ОС
+
+Тело bash скрипта для установки пакетов на РЕД ОС:
+
+```
+#!/bin/bash
+
+# Инструкция тестировалась на РЕД ОС 7.3
+# Требует запуск под root пользователем
+# Версия: 1
+
+set -ex
+
+cd /tmp
+
+yum -y install nano tar zip unzip curl wget dnsmasq lxc lxc-templates
+
+# Устанавливаем vagrant
+dnf install https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
+vagrant --version
+
+# Включить USE_LXC_BRIDGE в /etc/sysconfig/lxc
+sed -E 's|(USE_LXC_BRIDGE=")false(")|\1true\2|' -i /etc/sysconfig/lxc
+
+# Настраиваем сеть lxc-net
+
+cat <<EOT > /etc/lxc/default.conf
+lxc.net.0.type = veth
+lxc.net.0.link = lxcbr0
+lxc.net.0.flags = up
+lxc.net.0.hwaddr = 00:16:3e:xx:xx:xx
+EOT
+
+# Запуск LXC
+systemctl restart lxc-net
+systemctl enable lxc-net
+
+# Устанавливаем LXC плагин для vagrant
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
+tar -zxvf vagrant-lxc.tar.gz
+vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
+
+# Устанавливаем redir
+wget -c https://nextcloud.optimacros.com/s/j3Xwn2MGzsLRTES/download -O redir_3.3_centos8_x86_64.zip
+unzip redir_3.3_centos8_x86_64.zip
+cp redir /usr/bin/redir
+chmod +x /usr/bin/redir
+
+```
+
+
+
+
+
+<hr>
 
 [Вернуться к содержанию <](contents.md)
 
