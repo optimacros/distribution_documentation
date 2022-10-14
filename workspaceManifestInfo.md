@@ -795,6 +795,8 @@ use ntlmv2 = yes
 
 `nginx.allowRealIpFrom` - `string` http://nginx.org/ru/docs/http/ngx_http_realip_module.html#real_ip_header
 
+`nginx.wsExternalMode` - `boolean` не обязательное. определяет режим работы websockets. `true` - вебсокет будет работать на портах 8080/8081(в зависимости от ssl настроек). `false` - работа на портах 80/443
+
 ```
 {
     ...
@@ -803,7 +805,8 @@ use ntlmv2 = yes
         "allowRealIpFrom": [
             "255.255.255.255",
             "0.0.0.0"
-        ]
+        ],
+        "wsExternalMode": false
     }  
     ...  
 }
