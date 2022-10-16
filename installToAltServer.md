@@ -74,7 +74,7 @@ rpm -ivh vagrant_2.2.4_x86_64.rpm
 
 ```
 cd /tmp
-wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.4/vagrant-lxc.tar.gz
+wget -c https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
 ```
