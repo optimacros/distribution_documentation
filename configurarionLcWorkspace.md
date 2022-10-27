@@ -20,6 +20,14 @@
 
 Нам необходимо залить на сервер шаблоны nginx в папку `/om/login-center/data/nginx/templates`
 
+Для работы с воркспейсом версии >=2.3.2
+
+[ws80.conf.template](wsProxyTemplates/ws80.conf.template)
+
+[ws443.conf.template](wsProxyTemplates/ws443.conf.new.template)
+
+для версии < 2.3.2
+
 [ws80.conf.template](wsProxyTemplates/ws80.conf.template)
 
 [ws443.conf.template](wsProxyTemplates/ws443.conf.template)

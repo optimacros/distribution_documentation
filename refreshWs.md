@@ -69,6 +69,8 @@
 
 ![](./pictures/sshPutty6.jpg)
 
+Если вы обновляете воркспейс с версии < 2.3.2 следует внести правки в `manifest.json` [по инструкции](refreshWS2.3.2.md) 
+
 Далее на нужно запустить команду, которая восстановит все клиентские модели из бекапов и запустит воркспейс:
 
 ```current/install workspace --path /om/workspace1/manifest.json up```
