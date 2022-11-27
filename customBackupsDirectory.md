@@ -41,7 +41,7 @@ Optimacros не достаточно свободного места (ПЗУ) д
 в этой же директории /opt2/customBackupDirectory с соответствующими именами) в наш раздел в нашу новую директорию 
 созданную для этого:
 
-`mv modelBackups /opt2/customBackupDirectory/workspace1`
+`mv modelBackups /opt2/customBackupDirectory/workspace1/modelBackups`
 
 Далее нам следует сконфигурировать manifest файл воркспейса, добавив в блок container новое свойство, для хранения 
 бекапов в новом месте. Файл манифест находится в директории workspace1 откроем его для редактирования и добавим блок:
@@ -55,7 +55,7 @@ Optimacros не достаточно свободного места (ПЗУ) д
 ```
 "syncedFolders": {
   "modelBackups": {
-     "externalPath": "/opt2/customBackupDirectory/workspace1"
+     "externalPath": "/opt2/customBackupDirectory/workspace1/modelBackups"
    }
 }
 ```
