@@ -1,0 +1,72 @@
+[mysql]
+
+# CLIENT #
+socket                         = /var/run/mysqld/mysqld.sock
+
+[mysqld]
+
+# GENERAL #
+port        = 3306
+bind-address = 0.0.0.0
+user                           = mysql
+default-storage-engine         = InnoDB
+socket                         = /var/run/mysqld/mysqld.sock
+pid-file    = /var/run/mysqld/mysqld.pid
+
+
+# MyISAM #
+key-buffer-size                = 32M
+myisam-recover-options                 = FORCE,BACKUP
+
+# SAFETY #
+max-allowed-packet             = 16M
+max-connect-errors             = 1000000
+innodb                         = FORCE
+
+# DATA STORAGE #
+datadir                        = /var/lib/mysql/
+
+# BINARY LOGGING #
+server_id=1
+transaction_isolation = REPEATABLE-READ
+log-bin                        = mysql-bin
+binlog_format=mixed
+expire_logs_days=3
+
+
+# CACHES AND LIMITS #
+tmp-table-size                 = 512M
+max-heap-table-size            = 10G
+query_cache_type               = ON
+query_cache_limit              = 20M
+query_cache_size               = 5G
+max-connections                = 1000
+thread-cache-size              = 50
+open-files-limit               = 16384
+table-definition-cache         = 4096
+table-open-cache               = 4096
+interactive_timeout=2147483
+wait_timeout=2147483
+
+# INNODB #
+innodb-flush-method            = O_DIRECT
+innodb-log-files-in-group      = 2
+innodb-log-file-size           = 2G
+innodb-flush-log-at-trx-commit = 0
+innodb-file-per-table          = 1
+innodb-buffer-pool-size        = 805306368
+innodb-read-io-threads = 16
+innodb-write-io-threads = 8
+innodb-log-buffer-size = 256M
+innodb-purge-threads = 4
+
+sql-mode = NO_AUTO_VALUE_ON_ZERO
+
+# LOGGING #
+log-error                      = /var/log/mysql/mysql-error.log
+#log-queries-not-using-indexes = 1
+slow-query-log                 = 1
+long_query_time = 5
+slow-query-log-file            = /var/log/mysql/mysql-slow.log
+log_slow_verbosity = query_plan,innodb
+log_bin_trust_function_creators=1
