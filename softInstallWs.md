@@ -332,7 +332,6 @@ apt-get install bridge-utils
 apt-get install dnsmasq-base
 
 # Устанавливаем LXC из интернет репозитория /astra/stable/1.7_x86-64/repository-extended 1.7_x86-64/main
-# В случае если нету доступа к интернет репозиториям /astra/stable/1.7_x86-64/repository-extended
 
 apt install lxc lxc-astra
 
