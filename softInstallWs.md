@@ -295,7 +295,7 @@ EOT
 
 systemctl enable lxc-net
 systemctl restart lxc-net
-```
+
 > ! ВНИМАНИЕ. В случае если нету доступа к интернет репозиториям /astra/stable/1.7_x86-64/repository-extended main
 Пользуйтесь разделом "# Устанавливаем LXC" из инструкции для сборки Смоленск ("Инструкция тестировалась на Astra Linux 1.7 SE (Смоленск)")
 
@@ -304,6 +304,7 @@ systemctl restart lxc-net
 grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
 ```
 
+```
 # Инструкция тестировалась на Astra Linux 1.7 SE (Воронеж)
 # Требует запуск под root пользователем
 
@@ -347,7 +348,6 @@ wget https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-
 dpkg -i vagrant_2.2.19_x86_64.deb
 tar -zxvf vagrant-lxc.tar.gz
 vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
-
 ```
 
 ## Для работы воркспейса на операционной системе ALT Linux 9
