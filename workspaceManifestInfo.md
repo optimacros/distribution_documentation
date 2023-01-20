@@ -712,6 +712,8 @@ use ntlmv2 = yes
 
 `object`
 
+####mysql
+
 `oltp.mysql.memory` - `integer` объем памяти, используемый для кэширования. Чем больше выделено памяти на кэширование - тем больше производительность работы с базой. Под капотом устанавливает значение для innodb_buffer_pool_size.
 
 `oltp.mysql.web.status` - `required|boolean` позволяет включить или выключить доступ к базе через phpmyadmin.
@@ -743,6 +745,35 @@ use ntlmv2 = yes
     ...
 }
 ```
+
+####PostgreSQL
+
+`oltp.postgresql.service.status` - `required|boolean` позволяет включить или выключить сервис postgresql по умолчанию при загрузке воркспейса.
+
+`oltp.postgresql.web.status` - `required|boolean` позволяет включить или выключить доступ к базе через phppgadmin.
+
+```
+{
+    ...
+    "oltp": {
+        "postgresql": {
+            "service": {
+              "status": true
+            },
+            "web": {
+              "status": true
+            },
+            "userPasswords": {
+              "admin": "ToyHTC4AQft2V0HKG",
+              "reader": "NTiLfmu0Xah5qGw9",
+              "writer": "uW7FmbKm8QKpGwgt"
+            }
+        }
+    }
+    ...
+}
+```
+
 
 ### Mongod
 
