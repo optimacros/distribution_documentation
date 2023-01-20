@@ -296,6 +296,59 @@ EOT
 systemctl enable lxc-net
 systemctl restart lxc-net
 ```
+> ! ВНИМАНИЕ. В случае если нету доступа к интернет репозиториям /astra/stable/1.7_x86-64/repository-extended main
+Пользуйтесь разделом "# Устанавливаем LXC" из инструкции для сборки Смоленск ("Инструкция тестировалась на Astra Linux 1.7 SE (Смоленск)")
+
+проверить список подключеных репозиториев можно командой:
+```
+grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*
+```
+
+# Инструкция тестировалась на Astra Linux 1.7 SE (Воронеж)
+# Требует запуск под root пользователем
+
+# Флаг для переключения скрипта в strict mode (остановка скрипта при ошибках)
+set -ex
+
+# раскомментировать или добавить параметр в /etc/systemd/logind.conf
+
+if [[ $(grep 'KillUserProcesses' /etc/systemd/logind.conf) ]]; then sed -i '/KillUserProcesses/s/^#//' /etc/systemd/logind.conf; sed -i '/KillUserProcesses/s/yes/no/' /etc/systemd/logind.conf; else echo 'KillUserProcesses=no' >> /etc/systemd/logind.conf; fi
+
+# после правки logind.conf необходимо перезапустить сервис
+systemctl restart systemd-logind.service
+
+cd /tmp
+
+# Устанавливаем корневые сертификаты
+
+apt-get install ca-certificates
+
+# Устанавливаем пакет управления сетевыми мостами
+
+apt-get install bridge-utils
+
+# Устанавливаем дополнительный пакет для работы DHCP сети LXC
+
+apt-get install dnsmasq-base
+
+# Устанавливаем LXC из интернет репозитория /astra/stable/1.7_x86-64/repository-extended 1.7_x86-64/main
+
+apt install lxc lxc-astra
+
+# Устанавливаем пакет для проброса портов LXC контейнеров
+
+wget http://ftp.ru.debian.org/debian/pool/main/r/redir/redir_3.2-1_amd64.deb
+dpkg -i redir_3.2-1_amd64.deb
+
+# Устанавливаем утилиту Vagrant для управления LXC контейнерами
+wget https://releases.hashicorp.com/vagrant/2.2.19/vagrant_2.2.19_x86_64.deb
+wget https://github.com/optimacros/vagrant-lxc/releases/download/v1.4.5/vagrant-lxc.tar.gz
+
+dpkg -i vagrant_2.2.19_x86_64.deb
+tar -zxvf vagrant-lxc.tar.gz
+vagrant plugin install  --plugin-clean-sources vagrant-lxc.gem
+
+```
 
 ## Для работы воркспейса на операционной системе ALT Linux 9
 
