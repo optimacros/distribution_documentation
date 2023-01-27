@@ -21,7 +21,7 @@
 19. [Описание манифест файла Воркспейса](workspaceManifestInfo.md)
 20. [Изменение администратора Воркспейса (сервисная учетная запись)](changeWorkspaceSuperAdmin.md)
 21. [Как изменить подсеть LXC](lxcChangeAddressInfo.md)
-22. [Как изменить директорию с данными для Docker и LXC](dockerAndLxcChangeDataFolder.md)
+22. [Как изменить директорию с данными для Docker, LXC, Vagrant](dockerAndLxcChangeDataFolder.md)
 23. [Особенности установки на ALT Server 9](installToAltServer.md)
 24. [Перезагрузка воркспейса](restartWorkspace.md)
 25. [Изменение SSL сертификата Логин Центра](updateLoginCenterSsl.md)
