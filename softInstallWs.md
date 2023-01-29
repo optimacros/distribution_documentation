@@ -195,7 +195,7 @@ cd /tmp
 
 # Должен быть предустановлен репозиторий Epel (Проверьте его наличие командой `yum repolist`)
 
-yum -y install nano tar zip unzip curl wget lxc lxc-templates
+yum -y install nano tar zip unzip curl wget lxc lxc-templates dnsmasq
 
 # Устанавливаем vagrant
 dnf install https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.rpm
