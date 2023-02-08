@@ -724,7 +724,7 @@ use ntlmv2 = yes
 
 `oltp.mysql.ssl.cert` - `required|string` абсолютный путь к сертификату [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) на хосте.
 
-`oltp.mysql.ssl.key` - `required|string` Абсолютный путь к ключу от сертификата [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) на хосте.
+`oltp.mysql.ssl.key` - `required|string` абсолютный путь к ключу от сертификата [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) на хосте.
 
 ```
 {
