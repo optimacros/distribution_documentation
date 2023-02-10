@@ -749,6 +749,8 @@ https://workspace.domain/oltp/mysql/ - строка доступа из брау
 
 ####PostgreSQL
 
+доступно с версий >= 2.15.0
+
 `oltp.postgresql.service.status` - `required|boolean` позволяет включить или выключить сервис postgresql по умолчанию при загрузке воркспейса.
 
 `oltp.postgresql.web.status` - `required|boolean` позволяет включить или выключить доступ к базе через phppgadmin.
