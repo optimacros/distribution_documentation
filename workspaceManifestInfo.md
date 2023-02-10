@@ -745,6 +745,7 @@ use ntlmv2 = yes
     ...
 }
 ```
+https://workspace.domain/oltp/mysql/ - строка доступа из браузера
 
 ####PostgreSQL
 
@@ -773,7 +774,7 @@ use ntlmv2 = yes
     ...
 }
 ```
-
+https://workspace.domain/oltp/pgsql/ - строка доступа из браузера
 
 ### Mongod
 
