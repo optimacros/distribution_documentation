@@ -35,5 +35,6 @@
 33. [Установка и настройка VBA)](settingsVBA.md)
 34. [Установка AM)](cleanInstallationAm.md)
 35. [Переезд Optimacros на другой сервер](moveOm.md)
+36. [Установка TimeSheet Manager](cleanInstallationTsManager.md)
 
 [Вернуться к оглавлению <<](index.md)
