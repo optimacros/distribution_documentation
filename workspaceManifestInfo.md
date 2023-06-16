@@ -745,8 +745,11 @@ use ntlmv2 = yes
     ...
 }
 ```
+https://workspace.domain/oltp/mysql/ - строка доступа из браузера
 
 ####PostgreSQL
+
+доступно с версий >= 2.15.0
 
 `oltp.postgresql.service.status` - `required|boolean` позволяет включить или выключить сервис postgresql по умолчанию при загрузке воркспейса.
 
@@ -773,7 +776,7 @@ use ntlmv2 = yes
     ...
 }
 ```
-
+https://workspace.domain/oltp/pgsql/ - строка доступа из браузера
 
 ### Mongod
 
