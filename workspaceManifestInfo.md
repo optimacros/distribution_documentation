@@ -557,6 +557,7 @@ use ntlmv2 = yes
 
 `container-app-config-update.lockModelStatus` - `boolean` может ли пользователь "залочить" модель, если false - то модель перейдет в "disabled" при попытке это сделать
 `container-app-config-update.smtp.maxAttachmentSize` - `integer` максимальный размер файлов прикрепленных к отсылаемым по протоколу smtp письмам (указывается в количестве байт)
+`container-frontend-build-appConfig-osmHost` - `string` адрес OpenStreetMap сервера для подключения. Для добавления порта можно написать через `:`
 
 ```
 {
@@ -580,7 +581,8 @@ use ntlmv2 = yes
             "autoBuildOnContainerStart": true,
             "appConfig": {
                 "socketSecurityPort": 1111,
-                "socketPort": 2222
+                "socketPort": 2222,
+                "osmHost": "http//testosm.com:5643"
             },
             "relativeUrlPrefix": "urlprefix/"
         },
