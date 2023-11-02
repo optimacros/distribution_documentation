@@ -741,12 +741,23 @@ use ntlmv2 = yes
 
 `oltp.mysql.web.captcha` - `object` позволяет настроить google recaptcha капчу при входе в phpmyadmin.
 
+`oltp.mysql.ssl.ca` - `required|string` абсолютный путь к центру сертификации [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) на хосте.
+
+`oltp.mysql.ssl.cert` - `required|string` абсолютный путь к сертификату [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) на хосте.
+
+`oltp.mysql.ssl.key` - `required|string` абсолютный путь к ключу от сертификата [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) на хосте.
+
 ```
 {
     ...
     "oltp": {
         "mysql": {
             "memory": 123,
+            "ssl": {
+                "ca": "/om/workspace1/cert/ca.pem",
+                "cert": "/om/workspace1/cert/server-cert.pem",
+                "key": "/om/workspace1/cert/server-key.pem"
+            },
             "userPasswords": {
                 "root": "pass",
                 "admin": "pass",
